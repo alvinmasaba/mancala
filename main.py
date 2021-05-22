@@ -54,4 +54,7 @@ def main():
     pygame.quit()
 
 
+if __name__ == "__main__":
+    print("Welcome to Alvin's Mancala Demo! Enjoy the music! Free yo funky mind!")
+    
 main()
