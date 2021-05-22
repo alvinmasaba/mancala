@@ -1,5 +1,7 @@
 import pygame
-import random 
+
+pygame.init()
+pygame.mixer.init()
 
 WIDTH, HEIGHT = 1800, 450
 ROWS, COLS = 2, 8
@@ -26,14 +28,14 @@ MILK = (182, 209, 198)
 
 COLORS = (GREY, HI_YELLOW, HI_GREEN, HI_BLUE, SILVER, GOLD, MAUVE, AQUA, MILK, PINK, PURPLE)
 
-RED_STONE = pygame.transform.scale(pygame.image.load('mancala demo/assets/redstone.jpg'), (35, 25))
+#RED_STONE = pygame.transform.scale(pygame.image.load('mancala demo/assets/redstone.jpg'), (35, 25))
 
 PLAYERS = (0, 1)
 
 P1 = (0, 255, 26)
 P2 = (255, 15, 83)
 
-THEME = pygame.mixer.music.load('mancala demo/theme.mp3')
+pygame.mixer.music.load('mancala demo/theme.mp3')
 
 
 

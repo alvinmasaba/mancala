@@ -35,12 +35,6 @@ class Board:
                     winner = 'Player 2'
                 self.draw_win(win, winner)
 
-    #def pick_winner(self):
-        #if len(self.board[0][0]) > len(self.board[0][7]):
-            #return 'Player 1'
-        #elif len(self.board[0][0]) < len(self.board[0][7]):
-            #return 'Player 2'
-
     def draw_wells(self, win):
         win.fill(BLACK)
         if self.game_finished == False:
@@ -114,19 +108,6 @@ class Board:
                 self.board[current_row + 1][current_col] = []
                 self.player1_points += capture 
 
-        #else:
-            #if len(self.board[current_row][current_col]) == 1 and len(self.board[current_row - 1][current_col]) >= 1:
-               # capture = len(self.board[current_row - 1][current_col]) + 1
-              #  for stone in self.board[current_row][current_col]:
-                 #   self.board[0][0].append(stone)
-                #    stone.move(0, 0)
-              #  for stone in self.board[current_row - 1][current_col]:
-              #      self.board[0][0].append(stone)
-             #       stone.move(0, 0)
-              #  self.board[current_row][current_col] = []
-             #   self.board[current_row - 1][current_col] = []
-             #   self.player1_points += capture 
-
         self.current_row = current_row
         self.current_col = current_col
         if self.current_col == 0:
@@ -159,20 +140,7 @@ class Board:
                     stone.move(current_row, current_col - 1)
                     current_col -= 1
                     self.player2_points += self.player2_points   
-        
-      #  if current_row == 0:
-        #    if len(self.board[current_row][current_col]) == 1 and len(self.board[current_row + 1][current_col]) >= 1:
-       #         capture = len(self.board[current_row + 1][current_col]) + 1
-         #       for stone in self.board[current_row][current_col]:
-          #          self.board[1][7].append(stone)
-          #          stone.move(1, 7)
-             #   for stone in self.board[current_row + 1][current_col]:
-            #        self.board[1][7].append(stone)
-           #         stone.move(1, 7)
-           #     self.board[current_row][current_col] = []
-           #     self.board[current_row + 1][current_col] = []
-           #     self.player2_points += capture
-        
+           
         if current_row == 1:
             if len(self.board[current_row][current_col]) == 1 and len(self.board[current_row - 1][current_col]) >= 1:
                 capture = len(self.board[current_row - 1][current_col]) + 1

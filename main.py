@@ -1,7 +1,7 @@
 import pygame
 pygame.init()
-from mancala.constants import WIDTH, HEIGHT, RECT_SIZE, PLAYERS, THEME
-from mancala.board import Board
+pygame.mixer.init()
+from mancala.constants import WIDTH, HEIGHT, RECT_SIZE, PLAYERS
 from mancala.game import Game
 
 FPS = 60 # frames per second
